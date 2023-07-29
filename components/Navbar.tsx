@@ -17,7 +17,6 @@ const Navbar = async () => {
             Reddify
           </p>
         </Link>
-        {/*search */}
 
         <SearchBar />
         {session?.user ? (

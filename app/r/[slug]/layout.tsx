@@ -5,6 +5,15 @@ import { notFound } from "next/navigation";
 import SubscribeLeaveToggle from "../../../components/SubscribeLeaveToggle";
 import Link from "next/link";
 import { buttonVariants } from "../../../components/ui/Button";
+import type { Metadata } from 'next';
+import ToFeedButton from "../../../components/ToFeedButton";
+
+
+
+export const metadata: Metadata = {
+  title: 'Reddify',
+  description: 'A Reddit clone built with Next.js and TypeScript.',
+}
 
 const Layout = async ({
   children,
@@ -55,7 +64,8 @@ const Layout = async ({
   return (
     <div className="sm:container max-w-7xl mx-auto h-full pt-12">
       <div className="">
-        {/*TODO; button to take back */}
+       
+      <ToFeedButton />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-4 py-6">
           <div className="flex flex-col col-span-2 space-y-6">{children}</div>

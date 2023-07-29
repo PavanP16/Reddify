@@ -54,13 +54,13 @@ export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
     onError: () => {
       return toast({
         title: "Something went wrong.",
-        description: "Your post was not published. Please try again.",
+        description: "Your post was not published.See if you joined the community or not.Please try again.",
         variant: "destructive",
       });
     },
     onSuccess: () => {
-      // turn pathname /r/mycommunity/submit into /r/mycommunity
-      const newPathname = pathname.split("/").slice(0, -1).join("/");
+  
+      const newPathname = pathname.split("/").slice(0, -1).join("/"); //taking back to community
       router.push(newPathname);
 
       router.refresh();

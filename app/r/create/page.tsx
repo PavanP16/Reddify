@@ -21,8 +21,8 @@ const Page = () => {
         name: input,
       }
 
-      const { data } = await axios.post('/api/subreddit', payload)
-      return data as string
+        const { data } = await axios.post('/api/subreddit', payload)
+        return data as string
     },
     onError: (err) => {
       if (err instanceof AxiosError) {

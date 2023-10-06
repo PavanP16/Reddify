@@ -48,7 +48,6 @@ const Post: FC<PostProps> = ({
                   href={`/r/${subredditName}`}>
                   r/{subredditName}
                 </a>
-                <span className='px-1'>•</span>
               </>
             ) : null}
             <span>Posted by u/{post.author.username}</span>{' '}
